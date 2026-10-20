@@ -1,0 +1,446 @@
+/* =========================================================
+   دليل الطالب للمكتبة الإلكترونية - الأخضر والأبيض
+   ملف مستقل: style.css
+   ========================================================= */
+
+:root {
+    --primary: #166534;
+    --accent: #15803D;
+    --bg-light: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border-color: #BBF7D0;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --soft-green: #F0FDF4;
+    --dark-green: #14532D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark-green) 100%);
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.header .subtitle {
+    font-size: 16px;
+    color: #DCFCE7;
+    margin-bottom: 15px;
+}
+
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #A7F3D0;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(167, 243, 208, 0.4);
+}
+
+.badge-status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #34D399;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    page-break-inside: avoid;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+p {
+    margin-bottom: 14px;
+    color: #334155;
+    font-size: 15px;
+}
+
+ul, ol {
+    margin-right: 25px;
+    margin-bottom: 16px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.feature-box {
+    background-color: var(--soft-green);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.feature-box h4 {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.screenshot-container {
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-green);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.screenshot-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.screenshot-caption {
+    background-color: var(--soft-green);
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: bold;
+    border-top: 1px solid var(--border-color);
+}
+
+.icon-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.icon-table th,
+.icon-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.icon-table th {
+    background-color: var(--soft-green);
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.tip-box {
+    background-color: var(--soft-green);
+    border-right: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 10px 10px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--dark-green);
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+    margin-top: 40px;
+}
+
+/* قسم رابط المكتبة ورمز QR */
+.library-link-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.library-link-box,
+.qr-box {
+    background: var(--soft-green);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px 16px;
+}
+
+.library-link-box h3,
+.qr-box h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.library-url {
+    display: block;
+    direction: ltr;
+    overflow-wrap: anywhere;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 12px 0 20px;
+}
+
+.library-button {
+    display: inline-block;
+    background: var(--accent);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.library-button:hover {
+    background: var(--primary);
+}
+
+.library-qr {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 8px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.qr-box p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 10px 0 0;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .icon-table th,
+    .icon-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+@media print {
+    body {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+    .header {
+        background: #FFFFFF;
+        color: #000000;
+        border-bottom: 2px solid #000000;
+        padding: 20px 0;
+    }
+
+    .header h1,
+    .header .subtitle {
+        color: #000000;
+    }
+
+    .badge-status {
+        border: 1px solid #000000;
+        color: #000000;
+        background: #FFFFFF;
+    }
+
+    .card {
+        border: 1px solid #CCCCCC;
+        box-shadow: none;
+        margin-bottom: 20px;
+        padding: 15px;
+        page-break-inside: avoid;
+    }
+
+    .step-number {
+        background-color: #333333;
+        color: #FFFFFF;
+    }
+
+    .screenshot-container {
+        box-shadow: none;
+        border: 1px solid #CCCCCC;
+        page-break-inside: avoid;
+    }
+
+    .library-button {
+        background: #FFFFFF;
+        color: #166534;
+        border: 1px solid #166534;
+    }
+}
+
+
+/* واجهة ترحيبية حديثة مع الحفاظ على ألوان وتصميم الدليل */
+.hero {
+    background: linear-gradient(115deg, #ffffff 0%, #effcf5 100%);
+    border-bottom: 1px solid #d6eadf;
+    color: #0b513f;
+    padding: 42px 24px 48px;
+}
+.hero-inner {
+    max-width: 1460px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 286px minmax(0, 1fr);
+    gap: 54px;
+    align-items: center;
+    direction: ltr;
+}
+.qr-card {
+    background: #fff;
+    border: 1px solid #d5e9df;
+    border-radius: 22px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(10, 80, 60, .06);
+}
+.qr-card img { width: 100%; max-width: 205px; display: block; margin: 0 auto 18px; }
+.qr-card h3 { color: #075541; font-size: 18px; margin: 0 0 3px; }
+.qr-card p { color: #64748b; font-size: 12px; margin: 0; }
+.hero-copy { direction: rtl; text-align: right; }
+.hero-badge {
+    display: inline-block; background: #d1fae5; color: #075541;
+    border-radius: 999px; padding: 7px 17px; font-weight: 700; margin-bottom: 15px;
+}
+.hero h1 { font-size: clamp(30px, 3.2vw, 52px); line-height: 1.35; margin: 0 0 12px; color: #0f172a; }
+.hero h1 span { color: #075e46; }
+.hero-copy > p { font-size: 18px; color: #475569; max-width: 950px; margin: 0 0 24px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid #d5e9df; border-radius: 13px; padding: 13px 19px;
+    min-height: 52px; font: inherit; font-weight: 700; cursor: pointer;
+    text-decoration: none; background: #fff; color: #075541;
+}
+.hero-btn.primary { background: #075541; color: #fff; border-color: #075541; }
+.notice-box {
+    margin: 0 0 28px; padding: 18px 22px; border: 1px solid #fed7aa;
+    border-right: 6px solid #f59e0b; border-radius: 15px;
+    background: #fff7ed; color: #9a3412;
+}
+@media (max-width: 760px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+    .qr-card { max-width: 260px; margin: 0 auto; }
+    .hero-copy { text-align: center; }
+    .hero-actions { justify-content: center; }
+}
+@page { size: A4; margin: 12mm; }
+@media print {
+    body { background: #fff !important; font-size: 10pt; }
+    .hero { padding: 12px 0; background: #fff !important; }
+    .hero-inner { grid-template-columns: 150px 1fr; gap: 20px; }
+    .qr-card { box-shadow: none; padding: 8px; }
+    .qr-card img { max-width: 110px; margin-bottom: 4px; }
+    .hero h1 { font-size: 24pt; }
+    .hero-copy > p { font-size: 10pt; margin-bottom: 8px; }
+    .hero-actions { display: none !important; }
+    .container { max-width: none; padding: 0; margin: 12px auto; }
+    .card { box-shadow: none !important; break-inside: auto; page-break-inside: auto; }
+    .screenshot-container, .card-header, .feature-box, .tip-box { break-inside: avoid; page-break-inside: avoid; }
+    .screenshot-container img { max-height: 220mm; object-fit: contain; }
+    a { color: inherit; text-decoration: none; }
+}
